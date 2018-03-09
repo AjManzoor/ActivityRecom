@@ -1,0 +1,232 @@
+1520613162591	geckodriver	INFO	geckodriver 0.19.1
+1520613162603	geckodriver	INFO	Listening on 127.0.0.1:63162
+1520613165665	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ajmal\\AppData\\Local\\Temp\\rust_mozprofile.gDnTu8zevO3p"
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+1520613166693	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+1520613167972	Marionette	INFO	Listening on port 63175
+1520613168800	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 22084, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 22084, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 17260, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 23200, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 23200, Chrome[Child 22656, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1520613224925	geckodriver	INFO	geckodriver 0.19.1
+1520613224935	geckodriver	INFO	Listening on 127.0.0.1:63313
+1520613227986	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ajmal\\AppData\\Local\\Temp\\rust_mozprofile.jbqo5mHZysJJ"
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+1520613228725	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+1520613229879	Marionette	INFO	Listening on port 63325
+1520613230007	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 928, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 10052, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 10052, Chrome_[Parent 928, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1520613268271	geckodriver	INFO	geckodriver 0.19.1
+1520613268280	geckodriver	INFO	Listening on 127.0.0.1:63426
+1520613271351	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ajmal\\AppData\\Local\\Temp\\rust_mozprofile.bo0asLIKtnl3"
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+1520613272040	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+1520613273273	Marionette	INFO	Listening on port 63438
+1520613273396	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Child 19444, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 5728, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 14604, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1520613352140	geckodriver	INFO	geckodriver 0.19.1
+1520613352151	geckodriver	INFO	Listening on 127.0.0.1:63609
+1520613355162	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ajmal\\AppData\\Local\\Temp\\rust_mozprofile.aPdty4f8hbMK"
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+1520613355626	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+1520613356756	Marionette	INFO	Listening on port 63621
+1520613357185	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Child 12636, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 12680, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 12680, Chrome_Chi
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1520613552960	geckodriver	INFO	geckodriver 0.19.1
+1520613552969	geckodriver	INFO	Listening on 127.0.0.1:63955
+1520613555949	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ajmal\\AppData\\Local\\Temp\\rust_mozprofile.KeWjfKAhykhe"
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+1520613556776	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+1520613558106	Marionette	INFO	Listening on port 63967
+1520613559065	Marionette	WARN	TLS certificate errors will be ignored for this session
+1520613703693	geckodriver	INFO	geckodriver 0.19.1
+1520613703702	geckodriver	INFO	Listening on 127.0.0.1:64229
+1520613706756	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ajmal\\AppData\\Local\\Temp\\rust_mozprofile.21tirD94ENed"
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+1520613707501	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+1520613708781	Marionette	INFO	Listening on port 64241
+1520613708798	Marionette	WARN	TLS certificate errors will be ignored for this session
+1520613736218	geckodriver	INFO	geckodriver 0.19.1
+1520613736226	geckodriver	INFO	Listening on 127.0.0.1:64519
+1520613760761	geckodriver	INFO	geckodriver 0.19.1
+1520613760767	geckodriver	INFO	Listening on 127.0.0.1:64561
+1520613763814	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ajmal\\AppData\\Local\\Temp\\rust_mozprofile.TyQAj7GtCG55"
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+1520613764381	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+1520613765611	Marionette	INFO	Listening on port 64573
+1520613765833	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Child 20776, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 20776, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 27460, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 27460, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346[Parent 13576, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+[GPU 26452, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1520613978252	geckodriver	INFO	geckodriver 0.19.1
+1520613978258	geckodriver	INFO	Listening on 127.0.0.1:65090
+1520613981278	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ajmal\\AppData\\Local\\Temp\\rust_mozprofile.0YGpJxq1KK1N"
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+1520613981948	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+1520613983175	Marionette	INFO	Listening on port 65102
+1520613983296	Marionette	WARN	TLS certificate errors will be ignored for this session
+1520613987059	geckodriver	INFO	geckodriver 0.19.1
+1520613987071	geckodriver	INFO	Listening on 127.0.0.1:65170
+1520613990069	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ajmal\\AppData\\Local\\Temp\\rust_mozprofile.MsIQqqcRLBJG"
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+1520613990526	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+1520613991681	Marionette	INFO	Listening on port 65182
+1520613992103	Marionette	WARN	TLS certificate errors will be ignored for this session
+1520614131940	geckodriver	INFO	geckodriver 0.19.1
+1520614131952	geckodriver	INFO	Listening on 127.0.0.1:65455
+1520614135044	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ajmal\\AppData\\Local\\Temp\\rust_mozprofile.cDhJUVhMTEQh"
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+1520614135671	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+1520614136957	Marionette	INFO	Listening on port 65469
+1520614137067	Marionette	WARN	TLS certificate errors will be ignored for this session
+1520614142329	geckodriver	INFO	geckodriver 0.19.1
+1520614142344	geckodriver	INFO	Listening on 127.0.0.1:49170
+1520614145258	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ajmal\\AppData\\Local\\Temp\\rust_mozprofile.SH2DIrzdnpzD"
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+1520614145806	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+1520614147045	Marionette	INFO	Listening on port 49185
+1520614147277	Marionette	WARN	TLS certificate errors will be ignored for this session
+1520615144215	geckodriver	INFO	geckodriver 0.19.1
+1520615144230	geckodriver	INFO	Listening on 127.0.0.1:50850
+1520615147247	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ajmal\\AppData\\Local\\Temp\\rust_mozprofile.RZRBYff4KuU4"
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+1520615147721	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+1520615149055	Marionette	INFO	Listening on port 50862
+1520615149275	Marionette	WARN	TLS certificate errors will be ignored for this session
+1520615153530	geckodriver	INFO	geckodriver 0.19.1
+1520615153544	geckodriver	INFO	Listening on 127.0.0.1:50926
+1520615156540	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ajmal\\AppData\\Local\\Temp\\rust_mozprofile.0oGk7GrtziQr"
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+1520615157128	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+1520615158327	Marionette	INFO	Listening on port 50938
+1520615158558	Marionette	WARN	TLS certificate errors will be ignored for this session
+1520615574593	geckodriver	INFO	geckodriver 0.19.1
+1520615574604	geckodriver	INFO	Listening on 127.0.0.1:51603
+1520615577684	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ajmal\\AppData\\Local\\Temp\\rust_mozprofile.w0z9V5zofFvm"
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+1520615578341	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+1520615579623	Marionette	INFO	Listening on port 51615
+1520615579730	Marionette	WARN	TLS certificate errors will be ignored for this session
+1520615583758	geckodriver	INFO	geckodriver 0.19.1
+1520615583765	geckodriver	INFO	Listening on 127.0.0.1:51686
+1520615586771	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ajmal\\AppData\\Local\\Temp\\rust_mozprofile.9reMAwUsm6Ce"
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+1520615587211	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+1520615588379	Marionette	INFO	Listening on port 51698
+1520615588791	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Child 27120, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 12708, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1520615618461	geckodriver	INFO	geckodriver 0.19.1
+1520615618482	geckodriver	INFO	Listening on 127.0.0.1:51766
+1520615621518	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ajmal\\AppData\\Local\\Temp\\rust_mozprofile.ybYAolhLTdgq"
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+1520615622109	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+1520615623273	Marionette	INFO	Listening on port 51779
+1520615623539	Marionette	WARN	TLS certificate errors will be ignored for this session
+1520615627587	geckodriver	INFO	geckodriver 0.19.1
+1520615627595	geckodriver	INFO	Listening on 127.0.0.1:51845
+1520615630524	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ajmal\\AppData\\Local\\Temp\\rust_mozprofile.ejpo6JA1NtdL"
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+1520615631008	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\ajmal\AppData\Local\openvr\openvrpaths.vrpath
+1520615632197	Marionette	INFO	Listening on port 51857
+1520615632543	Marionette	WARN	TLS certificate errors will be ignored for this session
