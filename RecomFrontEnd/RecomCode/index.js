@@ -6,7 +6,7 @@ $(document).ready(function ()
     $("#button").click( function()
 	{
 
-        FB.api('/me?fields=name,email,posts', function(response){
+        FB.api('/me?fields=name,email,posts,likes', function(response){
             if(response && !response.error){
                 //console.log(response);
                 
@@ -57,14 +57,14 @@ function setElements(isLoggedIn){
 }
 
 //API GET REQUEST
-function testAPI(){
+function getInfo(){
     //pass more values here to get them (see graph explorer)
-    FB.api('/me?fields=name,email,posts', function(response){
+    FB.api('/me?fields=name,email,posts,likes', function(response){
         if(response && !response.error){
             console.log(response);
             var data = response;
             storeInfo(response);
-            console.log('called fbAPI');
+            console.log('called fbAPINew');
             return response;
         }
     });
@@ -90,7 +90,7 @@ function sendToServer(data){
             crossDomain: true,
             url: "http://localhost:3000/test",
             contentType: "application/json",
-            data: JSON.stringify({"data":"data"}),
+            data: JSON.stringify(data),
         }).then(
                console.log('made post'),
                console.log(data)
@@ -98,8 +98,9 @@ function sendToServer(data){
                 function() {
         console.log('error');
     }
-    ) }
+    ) 
+}
 
 
-
+res.paging.next
 

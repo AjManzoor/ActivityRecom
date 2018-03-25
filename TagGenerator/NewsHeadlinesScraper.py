@@ -1,19 +1,10 @@
 import selenium.webdriver as webdriver
 import time
 import os
-from neo4j.v1 import GraphDatabase
-
-uri = "bolt://localhost:7687"
-driver = GraphDatabase.driver(uri, auth=("neo4j", "password"))
-
-def add_to_graph_db(noun):
-    with driver.session() as session:
-        with session.begin_transaction() as tx:
-            tx.run("CREATE(a:Person {name:{noun}}) RETURN a", noun= noun)
-        
-    
 
 def get_results(search_term):
+
+    all_results = []
     url = "https://news.google.com/news/?ned=uk&gl=GB&hl=en-GB"
     browser = webdriver.Firefox()
     browser.get(url)
@@ -32,15 +23,11 @@ def get_results(search_term):
     time.sleep(2)
     news_items = browser.find_elements_by_class_name("nuEeue.hzdq5d.ME7ew")
     for news_item in news_items:
-        print(news_item.text)
+        all_results.append(news_item.text)
 
     browser.close()
     os.system("taskkill /im geckodriver.exe")
+
+    return (all_results)
+
     
-
-
-get_results("cat")
-
-
-
-
