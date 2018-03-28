@@ -2,6 +2,8 @@
 
 var neo4j = require('neo4j-driver').v1;
 
+var TfIdf = require('node-tfidf');
+
 var mongoose = require('mongoose'),
   User = mongoose.model('Users');
 
@@ -18,23 +20,42 @@ exports.list_all_tasks = function(req, res) {
 
 exports.test_function = function(req, res){
     var newUser = new User();
+    var tfidf = new TfIdf();
     
     var posts  = req.body.posts.data
     var likes = req.body.likes.data;
 
+    console.log(posts.length);
+
+    for(var i = 0; i < posts.length; i ++){
+      tfidf.addDocument(posts[i]['message'])
+    }
+
+    console.log("===========ufc=============")
+
+    tfidf.tfidfs('UFC', function(i, measure) {
+      console.log('document #' + i + ' is ' + measure);
+  });
+
+    console.log("length");
+    
     var person = 'x';
     
     console.log(likes[0]['name'])
     console.log(posts[0]['message'])
 
-    addPersonToNeo4j(person);
+    /*addPersonToNeo4j(person);
 
     for (var i = 0; i < likes.length; i++){
       addHobbyToNeo4j(likes[i]['name']);
       createRelationship(person,likes[i]['name']);
     }
+    */
 
+    addUserToNeo4j('a')
+    createRelationship('a', '0.23124', 'comedy')
 
+/*
     createRelationship("Arthur", "Xmen")
     newUser.save(function(err,user){
         if(err)
@@ -49,6 +70,7 @@ exports.test_function = function(req, res){
         }
 
     })
+    */
 }
 
 
@@ -90,8 +112,8 @@ exports.delete_a_task = function(req, res) {
   });
 };
 
-function addPersonToNeo4j(name){
-  var str = 'CREATE(a:Person{name:"Name"}) RETURN a'
+function addUserToNeo4j(name){
+  var str = 'CREATE(a:User{name:"Name"}) RETURN a'
   var newStr = str.replace("Name",name)
   console.log(newStr);
   session
@@ -123,10 +145,11 @@ function addHobbyToNeo4j(name){
   }
 
 
-function createRelationship(name, title){
-  var str = 'MATCH (a:Person{name:"Name"}),(b:Hobby{id:"Title"}) MERGE (a)-[r:likes]->(b)'
+function createRelationship(name, weight, tag){
+  var str = "MATCH (a:User { name: 'Name' }),(b:Tag { name: 'TagInput' }) MERGE (a)-[r:usertag{weight:Weight}]->(b) RETURN a"
   var str = str.replace("Name", name)
-  var newStr = str.replace("Title", title)
+  var str = str.replace("Weight", weight)
+  var newStr = str.replace("TagInput", tag)
   console.log(newStr);
   session
   .run(newStr)
