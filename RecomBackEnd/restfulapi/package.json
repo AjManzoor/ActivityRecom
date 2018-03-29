@@ -17,6 +17,7 @@
     "express": "^4.16.2",
     "mongoose": "^5.0.9",
     "neo4j-driver": "^1.5.3",
-    "node-tfidf": "0.0.2"
+    "node-tfidf": "0.0.2",
+    "remove-punctuation": "0.0.4"
   }
 }

@@ -84,15 +84,15 @@ def generate_tags(activity, stop_word_list):
 
     sorted_data = reversed(sorted(data.items(), key=operator.itemgetter(1)))
 
-    Neo4j.add_hobby_to_graph_db(activity)
+    Neo4j.add_activity_to_graph(activity)
     x= 0
     for items in sorted_data:
         if x < 25:
             print(items)
-            Neo4j.add_tag_to_graph_db(items[0])
-            Neo4j.add_relationship_to_graph_db(activity, items[0])
+            Neo4j.add_tag_to_graph(items[0])
+            Neo4j.add_relationship_to_graph(activity, items[0] ,items[1])
             x+=1
         else:
             break
 
-generate_tags('Brock Lesnar', stop_word_list())
+generate_tags('Comedy', stop_word_list())

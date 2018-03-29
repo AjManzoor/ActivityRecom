@@ -1,5 +1,7 @@
 'use strict';
 
+var removePunctuation = require('remove-punctuation');
+
 var neo4j = require('neo4j-driver').v1;
 
 var TfIdf = require('node-tfidf');
@@ -18,31 +20,79 @@ exports.list_all_tasks = function(req, res) {
   });
 };
 
+
+
+
 exports.test_function = function(req, res){
     var newUser = new User();
     var tfidf = new TfIdf();
+    var allDocument = [];
+    var allWords = []
     
+
     var posts  = req.body.posts.data
     var likes = req.body.likes.data;
 
-    console.log(posts.length);
+    
+    
+   for(var i = 0; i <likes.length; i++){
+   
+     var currentWords = []
+     currentWords = removePunctuation(likes[i]['name'].toLowerCase()).split(" ");
+     allWords = allWords.concat(currentWords)
+
+
+   }
 
     for(var i = 0; i < posts.length; i ++){
-      tfidf.addDocument(posts[i]['message'])
-    }
+      var currentWords = []
+      currentWords = removePunctuation(posts[i]['message'].toLowerCase()).split(" ")
+      
+      //split(" ");
+      allWords = allWords.concat(currentWords)
+      
+    }    
+
+    
+    var allWordsJoined;
+    allWordsJoined = allWords.join();
+    tfidf.addDocument(allWordsJoined);
+    var isFound;
+    //console.log(allWords);
+
+       
+
+    console.log("ALL DOCUMENTS ^^^^^^^^^")
 
     console.log("===========ufc=============")
 
-    tfidf.tfidfs('UFC', function(i, measure) {
-      console.log('document #' + i + ' is ' + measure);
-  });
+    
+    var allWordsSet = new Set();
+    var allWordsArray = [];
 
-    console.log("length");
+
+    for(var x = 0 ; x < allWords.length; x++){
+      tfidf.tfidfs(allWords[x], function(i, measure) {
+        //console.log(allWords[x] +' ' + measure);
+        allWordsArray.push(allWords[x])
+        allWordsArray.push(measure)
+        //console.log(allWordsArray)
+        allWordsSet.add(allWordsArray);
+        allWordsArray = [];
+
+    });
+
+    console.log(allWordsSet);
+
+    }
+  
+    
+
+   // console.log("length");
     
     var person = 'x';
     
-    console.log(likes[0]['name'])
-    console.log(posts[0]['message'])
+   
 
     /*addPersonToNeo4j(person);
 
@@ -52,8 +102,8 @@ exports.test_function = function(req, res){
     }
     */
 
-    addUserToNeo4j('a')
-    createRelationship('a', '0.23124', 'comedy')
+    //addUserToNeo4j('a')
+    //createRelationship('a', '0.23124', 'comedy')
 
 /*
     createRelationship("Arthur", "Xmen")
@@ -84,22 +134,6 @@ exports.create_a_task = function(req, res) {
 };
 
 
-exports.read_a_task = function(req, res) {
-  Task.findById(req.params.taskId, function(err, task) {
-    if (err)
-      res.send(err);
-    res.json(task);
-  });
-};
-
-
-exports.update_a_task = function(req, res) {
-  Task.findOneAndUpdate({_id: req.params.taskId}, req.body, {new: true}, function(err, task) {
-    if (err)
-      res.send(err);
-    res.json(task);
-  });
-};
 
 
 exports.delete_a_task = function(req, res) {
@@ -163,3 +197,22 @@ function createRelationship(name, weight, tag){
   })
 
 }
+
+function checkIfAlreadyExists(catergory, itemName){
+  var str = "MATCH (a:catergory {name:'itemName'}) return a.name";
+  var str = str.replace("catergory", catergory);
+  var newStr = str.replace("itemName", itemName);
+  console.log(newStr);
+  session
+  .run(newStr)
+  .then(function(results){
+      console.log(results.records.length)
+      return results.records.length
+  })
+  .catch(function(err){
+      console.log(err)
+  })
+
+}
+
+

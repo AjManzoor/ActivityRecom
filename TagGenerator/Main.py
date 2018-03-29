@@ -15,7 +15,7 @@ import NewsHeadlinesScraper
 
 
 all_headlines = NewsHeadlinesScraper.get_results("ufc")
-print(all_headlines, ' ALL HEADLINES')
+print(all_headlines)
 
 
 data = {}
