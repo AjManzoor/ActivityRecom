@@ -20,7 +20,8 @@ $(document).ready(function ()
                     complete: function( responseData, textStatus, jqXHR )
                     {
                         console.log(responseData['responseJSON']);
-                        console.log('data')                        
+                        console.log('data');
+                        addListItems(responseData['responseJSON'])                        
         
                         //console.log(responseData.responseText);
                         //Response(responseData.responseText)
@@ -128,3 +129,20 @@ function sendToServer(data){
 
 //res.paging.next
 
+function addListItems(countries){
+    alert('adding items 3')
+    //var countries = ['United States', 'Canada', 'Argentina', 'Armenia'];
+    var cList = $('ul.mylist')
+    for(x = 0; x < countries.length; x++){
+        var li = $('<li/>')
+            .addClass('ui-menu-item')
+            .attr('role', 'menuitem')
+            .appendTo(cList);
+        var aaa = $('<a/>')
+            .addClass('ui-all')
+            .text(countries[x][0])
+            .appendTo(li);
+            console.log(countries[x])
+    }
+   
+}

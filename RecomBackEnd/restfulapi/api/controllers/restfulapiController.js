@@ -6,17 +6,10 @@ var neo4j = require('neo4j-driver').v1;
 
 var TfIdf = require('node-tfidf');
 
-var mongoose = require('mongoose'),
-  User = mongoose.model('Users');
-
 var driver = neo4j.driver('bolt://localhost', neo4j.auth.basic('neo4j','password'));
 var session = driver.session();
 
-
-
-
 exports.test_function = function(req, res){
-    var newUser = new User();
     var tfidf = new TfIdf();
     var allDocument = [];
     var allWords = []
@@ -83,22 +76,23 @@ exports.test_function = function(req, res){
     
     var allSoc = [];
 
-
-
-
     makeAMatch(noDupArray).then(function(resolve){
       console.log('________________________');
       console.log(resolve + ' resolve')
       var newArr = []
       for(var m = 0; m < resolve.length; m++ ){
         if(resolve[m] == null){
-          resolve[m] = 0;
+          resolve[m] = 1;
         }
       }
 
       while(resolve.length) newArr.push(resolve.splice(0,2));
       console.log(newArr + ' newArr')
 
+      
+      newArr = checkDuplicate(newArr)
+      newArr = newArr.sort(sortFunction)
+      console.log(newArr);
       res.send(newArr)
       
     })
@@ -160,8 +154,6 @@ function makeAMatch(noDupArray){
   
   var str = "MATCH (a:Tag {name:'Name'})-[r]-(m:Activity) return r.weight, m.name;";
   var newStr = str.replace("Name", noDupArray[x][0]);
-  //var x = 1
-
   
   console.log(newStr);
   session
@@ -171,9 +163,7 @@ function makeAMatch(noDupArray){
     results.records.forEach(function(record){
       
       itemArray.push(record.get('m.name'))
-      itemArray.push(record.get('r.weight'))
-      //return(itemArray);
-      
+      itemArray.push(record.get('r.weight'))      
       
 
   })
@@ -206,10 +196,40 @@ function sortFunction(a, b) {
 }
 
 function sortFunction2(a, b) {
+  //sorts it by the first element alphabetically for my array
   if (a[0] === b[0]) {
       return 0;
   }
   else {
-      return (a[0] > b[0]) ? -1 : 1;
+      return (a[0] < b[0]) ? -1 : 1;
   }
+}
+
+function checkDuplicate(array){
+  var combinedArr =[];
+  var length = array.length;
+  //sort the array so all the elements are alphabetical
+  array.sort(sortFunction2)
+  for(var x = 0; x < length; x++){
+    if(array.length == 1){
+      //if there's only one item left push it to combined array
+      combinedArr.push(array[0])
+
+    }
+    else{
+      //if the elements are the same add up their tfidf value and get rid of one them
+    if(array[0][0] == array[1][0]){
+      array[1][1] = array[0][1]+ array[1][1]
+      array.shift();
+
+
+    }
+    else{
+      //otherwise if there aren't any more copies get add it to combined array
+      combinedArr.push(array[0])
+      array.shift();
+    }
+  }
+  }
+  return combinedArr;
 }
