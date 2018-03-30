@@ -11,7 +11,30 @@ $(document).ready(function ()
                 //console.log(response);
                 
                 console.log('called fbAPIFromWithinClick');
-                sendToServer(response);
+                $.ajax({
+                    type: "POST",
+                    crossDomain: true,
+                    url: "http://localhost:3000/test",
+                    contentType: "application/json",
+                    data: JSON.stringify(response),
+                    complete: function( responseData, textStatus, jqXHR )
+                    {
+                        console.log(responseData['responseJSON']);
+                        console.log('data')                        
+        
+                        //console.log(responseData.responseText);
+                        //Response(responseData.responseText)
+                        
+                        
+                    },
+                    error: function(jqXHR, textStatus, errorThrown)
+                    {
+                        console.log(errorThrown);
+                        console.log('heres the err');
+                        $("#result").html("<p style='color:red;'>An error has occurred, " + errorThrown + ".</p>");
+        
+                    }
+                })
             
             }
         });
@@ -91,9 +114,10 @@ function sendToServer(data){
             url: "http://localhost:3000/test",
             contentType: "application/json",
             data: JSON.stringify(data),
-        }).then(
-               console.log('made post'),
-               console.log(data)
+        }).done(
+               console.log('made post 3'),
+               console.log(data),
+               
         ).fail(
                 function() {
         console.log('error');
@@ -102,5 +126,5 @@ function sendToServer(data){
 }
 
 
-res.paging.next
+//res.paging.next
 

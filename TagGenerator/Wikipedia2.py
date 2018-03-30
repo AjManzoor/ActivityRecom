@@ -95,4 +95,4 @@ def generate_tags(activity, stop_word_list):
         else:
             break
 
-generate_tags('Comedy', stop_word_list())
+generate_tags('Movies', stop_word_list())
