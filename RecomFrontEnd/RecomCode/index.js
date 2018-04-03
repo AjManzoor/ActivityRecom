@@ -129,20 +129,17 @@ function sendToServer(data){
 
 //res.paging.next
 
-function addListItems(countries){
-    alert('adding items 3')
-    //var countries = ['United States', 'Canada', 'Argentina', 'Armenia'];
+function addListItems(listItems){
     var cList = $('ul.mylist')
-    for(x = 0; x < countries.length; x++){
+    for(x = 0; x < listItems.length; x++){
         var li = $('<li/>')
             .addClass('ui-menu-item')
             .attr('role', 'menuitem')
             .appendTo(cList);
         var aaa = $('<a/>')
             .addClass('ui-all')
-            .text(countries[x][0])
+            .text(listItems[x][0])
             .appendTo(li);
-            console.log(countries[x])
     }
    
 }

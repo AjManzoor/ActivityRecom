@@ -54,9 +54,9 @@ exports.test_function = function(req, res){
 
     });
 
-    
-
     }
+
+    console.log(allWordsSet)
 
     let sortedArray = [];
     allWordsSet.forEach(v => sortedArray.push(v))
@@ -155,32 +155,30 @@ function makeAMatch(noDupArray){
   var str = "MATCH (a:Tag {name:'Name'})-[r]-(m:Activity) return r.weight, m.name;";
   var newStr = str.replace("Name", noDupArray[x][0]);
   
+  
   console.log(newStr);
   session
   .run(newStr)
   .then(function(results){
-    
-    results.records.forEach(function(record){
-      
-      itemArray.push(record.get('m.name'))
-      itemArray.push(record.get('r.weight'))      
-      
-
+      results.records.forEach(function(record){
+          itemArray.push(record.get('m.name'));
+          itemArray.push(record.get('r.weight'));
   })
   count ++;
   finalArr = finalArr.concat(itemArray)
-  itemArray = []
-  console.log(count + ' count')
+  
+  itemArray = [];
+  console.log(count + ' count');
 
   if(count == noDupArray.length){
-    console.log(finalArr)
-  resolve(finalArr);
+    console.log(finalArr);
+    resolve(finalArr);
   }
 })
 }
   })
 .catch(function(err){
-  console.log(err)
+  console.log(err);
 })
 }
   

@@ -13,6 +13,8 @@ import operator
 import math
 import Neo4j
 
+print(wikipedia.summary('Coventry Transport Museum'))
+
 
 def stop_word_list():
     stop_word_array2 = []
@@ -44,8 +46,9 @@ def inverse_document_frequency(term, allDocuments):
             numDocumentsWithThisTerm = numDocumentsWithThisTerm + 1
  
     if numDocumentsWithThisTerm > 0:
-
         return 1.0 + math.log(float(len(allDocuments)) / numDocumentsWithThisTerm)
+        print(len(allDoucument))
+        print('length of all documents ^^^^')
     else:
         return 1.0
 
@@ -61,6 +64,7 @@ def generate_tags(activity, stop_word_list):
     page_py = wiki_wiki.page(page_search)
     ufc  = wikipedia.page(page_search)
     sections_array = print_sections(page_py.sections, [])
+    #print(sections_array)
 
     translator = str.maketrans('','', string.punctuation)
 
@@ -71,6 +75,8 @@ def generate_tags(activity, stop_word_list):
         dirty_text = dirty_text.replace('\n', ' ')
         if dirty_text:
             all_documents.append(dirty_text)
+
+    #print(all_documents)
        
     for sentences in range(len(all_documents)):
         word_list = all_documents[sentences].split(" ")
@@ -78,7 +84,7 @@ def generate_tags(activity, stop_word_list):
             word = word.lower()
             if word not in stop_word_list and not word.isdigit():
                 tfidf_tf_val = term_frequency(word, all_documents[sentences])
-                tfidf_idf_val = inverse_document_frequency(word, all_documents)
+                tfidf_idf_val = inverse_document_frequency(word, all_documents[sentences])
                 final_val = tfidf_tf_val * tfidf_tf_val
                 data[word] = final_val 
 
@@ -89,10 +95,10 @@ def generate_tags(activity, stop_word_list):
     for items in sorted_data:
         if x < 25:
             print(items)
-            Neo4j.add_tag_to_graph(items[0])
-            Neo4j.add_relationship_to_graph(activity, items[0] ,items[1])
+            #Neo4j.add_tag_to_graph(items[0])
+            #Neo4j.add_relationship_to_graph(activity, items[0] ,items[1])
             x+=1
         else:
             break
 
-generate_tags('Movies', stop_word_list())
+generate_tags('ufc', stop_word_list())
