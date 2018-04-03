@@ -2,12 +2,20 @@
 
 var removePunctuation = require('remove-punctuation');
 
+var bayes = require('bayes')
+
+var classifier = bayes()
+
+
 var neo4j = require('neo4j-driver').v1;
 
 var TfIdf = require('node-tfidf');
 
 var driver = neo4j.driver('bolt://localhost', neo4j.auth.basic('neo4j','password'));
 var session = driver.session();
+
+var m = naiveBayesClassifier();
+naiveBayesClassifier2(m);
 
 exports.test_function = function(req, res){
     var tfidf = new TfIdf();
@@ -230,4 +238,41 @@ function checkDuplicate(array){
   }
   }
   return combinedArr;
+}
+
+
+function naiveBayesClassifier(){
+  classifier.learn('conor', 'positive')
+  classifier.learn('ufc', 'positive')
+  classifier.learn('fight', 'positive')
+  classifier.learn('gsp', 'positive')
+  
+  
+  // teach it a negative phrase
+  
+  classifier.learn('tyson', 'negative')
+  classifier.learn('kill', 'negative')
+  classifier.learn('fight', 'negative')
+  classifier.learn('dead', 'negative')
+  
+  return classifier
+  
+  //console.log(revivedClassifier)
+  
+}
+
+function naiveBayesClassifier2(classifier){
+  var x = classifier
+  // now ask it to categorize a document it has never seen before
+  
+  var catergory = x.categorize('kill mike kill')
+  // => 'positive'
+  
+  // serialize the classifier's state as a JSON string.
+  var stateJson = x.toJson()
+  
+  console.log(catergory)
+  
+  // load the classifier back from its JSON representation.
+  var revivedClassifier = bayes.fromJson(stateJson)
 }
